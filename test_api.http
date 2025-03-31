@@ -1,0 +1,77 @@
+### test login
+POST http://10.103.166.175:5888/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "vben",
+  "password": "123456"
+}
+
+### refresh token
+POST http://10.103.166.175:5888/api/auth/refresh
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwicGFzc3dvcmQiOiIxMjM0NTYiLCJyZWFsTmFtZSI6IlZiZW4iLCJyb2xlcyI6WyJzdXBlciJdLCJ1c2VybmFtZSI6InZiZW4iLCJpYXQiOjE3NDMxNTIyODIsImV4cCI6MTc0NTc0NDI4Mn0.TqlBo5tCCMB9wkxilcQc18k_n7xrEElzoVbCeaZGCOU
+
+### test logout
+POST http://10.103.166.175:5888/api/auth/logout
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwicGFzc3dvcmQiOiIxMjM0NTYiLCJyZWFsTmFtZSI6IlZiZW4iLCJyb2xlcyI6WyJzdXBlciJdLCJ1c2VybmFtZSI6InZiZW4iLCJpYXQiOjE3NDMxNTIyODIsImV4cCI6MTc0NTc0NDI4Mn0.TqlBo5tCCMB9wkxilcQc18k_n7xrEElzoVbCeaZGCOU
+
+### test codes
+POST http://10.103.166.175:5888/api/auth/codes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwicGFzc3dvcmQiOiIxMjM0NTYiLCJyZWFsTmFtZSI6IlZiZW4iLCJyb2xlcyI6WyJzdXBlciJdLCJ1c2VybmFtZSI6InZiZW4iLCJpYXQiOjE3NDMxNTYyODcsImV4cCI6MTc0Mzc2MTA4N30.S_rGgGZWXy6H2oRRRfNBIOdIC3ylziBfFKhOd0j0gvU
+
+### test get all menu
+POST http://10.103.166.175:5888/api/menu/all
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwicGFzc3dvcmQiOiIxMjM0NTYiLCJyZWFsTmFtZSI6IlZiZW4iLCJyb2xlcyI6WyJzdXBlciJdLCJ1c2VybmFtZSI6InZiZW4iLCJpYXQiOjE3NDMxNTYyODcsImV4cCI6MTc0Mzc2MTA4N30.S_rGgGZWXy6H2oRRRfNBIOdIC3ylziBfFKhOd0j0gvU
+
+### get menu list
+GET http://10.103.166.175:5888/api/system/menu/list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwicGFzc3dvcmQiOiIxMjM0NTYiLCJyZWFsTmFtZSI6IlZiZW4iLCJyb2xlcyI6WyJzdXBlciJdLCJ1c2VybmFtZSI6InZiZW4iLCJpYXQiOjE3NDMxNTYyODcsImV4cCI6MTc0Mzc2MTA4N30.S_rGgGZWXy6H2oRRRfNBIOdIC3ylziBfFKhOd0j0gvU
+
+### get dept list
+GET http://10.103.166.175:5888/api/system/dept/list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwicGFzc3dvcmQiOiIxMjM0NTYiLCJyZWFsTmFtZSI6IlZiZW4iLCJyb2xlcyI6WyJzdXBlciJdLCJ1c2VybmFtZSI6InZiZW4iLCJpYXQiOjE3NDMxNTYyODcsImV4cCI6MTc0Mzc2MTA4N30.S_rGgGZWXy6H2oRRRfNBIOdIC3ylziBfFKhOd0j0gvU
+
+
+
+
+### create dept
+POST http://10.103.166.175:5888/api/system/dept
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwicGFzc3dvcmQiOiIxMjM0NTYiLCJyZWFsTmFtZSI6IlZiZW4iLCJyb2xlcyI6WyJzdXBlciJdLCJ1c2VybmFtZSI6InZiZW4iLCJpYXQiOjE3NDMxNTYyODcsImV4cCI6MTc0Mzc2MTA4N30.S_rGgGZWXy6H2oRRRfNBIOdIC3ylziBfFKhOd0j0gvU
+
+{
+  "custom_field1": "aaa"
+}
+
+### update dept
+PUT http://10.103.166.175:5888/api/system/dept
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwicGFzc3dvcmQiOiIxMjM0NTYiLCJyZWFsTmFtZSI6IlZiZW4iLCJyb2xlcyI6WyJzdXBlciJdLCJ1c2VybmFtZSI6InZiZW4iLCJpYXQiOjE3NDMxNTYyODcsImV4cCI6MTc0Mzc2MTA4N30.S_rGgGZWXy6H2oRRRfNBIOdIC3ylziBfFKhOd0j0gvU
+
+
+### get role list
+GET http://10.103.166.175:5888/api/system/role/list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwicGFzc3dvcmQiOiIxMjM0NTYiLCJyZWFsTmFtZSI6IlZiZW4iLCJyb2xlcyI6WyJzdXBlciJdLCJ1c2VybmFtZSI6InZiZW4iLCJpYXQiOjE3NDMxNTYyODcsImV4cCI6MTc0Mzc2MTA4N30.S_rGgGZWXy6H2oRRRfNBIOdIC3ylziBfFKhOd0j0gvU
+
+
+### get user info
+GET http://10.103.166.175:5888/api/user/info
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwicGFzc3dvcmQiOiIxMjM0NTYiLCJyZWFsTmFtZSI6IlZiZW4iLCJyb2xlcyI6WyJzdXBlciJdLCJ1c2VybmFtZSI6InZiZW4iLCJpYXQiOjE3NDMxNTYyODcsImV4cCI6MTc0Mzc2MTA4N30.S_rGgGZWXy6H2oRRRfNBIOdIC3ylziBfFKhOd0j0gvU
+
+
+### get table list
+GET http://10.103.166.175:5888/api/table/list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwicGFzc3dvcmQiOiIxMjM0NTYiLCJyZWFsTmFtZSI6IlZiZW4iLCJyb2xlcyI6WyJzdXBlciJdLCJ1c2VybmFtZSI6InZiZW4iLCJpYXQiOjE3NDMxNTYyODcsImV4cCI6MTc0Mzc2MTA4N30.S_rGgGZWXy6H2oRRRfNBIOdIC3ylziBfFKhOd0j0gvU
+
+
+### test get status
+GET http://10.103.166.175:5888/api/status
