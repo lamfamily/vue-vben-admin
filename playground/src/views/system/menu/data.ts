@@ -95,7 +95,13 @@ export function useColumns(
             text: '新增下级',
           },
           'edit', // 默认的编辑按钮
-          'delete', // 默认的删除按钮
+          // 'delete', // 默认的删除按钮
+          {
+            code: 'delete',
+            disabled: (row: SystemMenuApi.SystemMenu) => {
+              return !!(row.children && row.children.length > 0);
+            },
+          },
         ],
       },
       field: 'operation',
